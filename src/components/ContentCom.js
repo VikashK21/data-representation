@@ -4,7 +4,7 @@ import '../App.css'
 function ContentCom({ content }) {
   let date = Date(content.date).split(" ")
   return (
-    <div>
+    <div className="text-modeling">
       <h2>
         {content.title}
       </h2>

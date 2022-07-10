@@ -20,10 +20,10 @@ function Main() {
     getData();
   });
   return (
-    <div>
+    <div className="cards">
       {data.data.length > 0 &&
         data.data.map(ele =>
-          <div key={ele.id}>
+          <div className="card" key={ele.id}>
             <ImageCom image={ele}/>
             <ContentCom content={ele} />
           </div>

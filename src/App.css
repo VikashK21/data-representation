@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -16,21 +11,51 @@
 .flex {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
-  justify-content: space-around;
-  /* gap: 10px; */
+  align-items: center;
+  justify-content: space-between;
 }
 
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-itm {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 5px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
+  margin: 2px;
+}
+
+.img-cont {
+  position: relative;
+}
+
+.avatar{
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  border-radius: 50% !important;
+}
+
+.heading{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
+}
+.card img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 15rem;
+  border-radius: 1%;
 }
 
 .App-link {
@@ -44,4 +69,57 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+div.circle {
+  width: 2%;
+  height: 0;
+  margin: 2% 0 0 3%;
+  border-radius: 60%;
+  margin-bottom: -90%;
+  padding-bottom: 2%;
+  float: left;
+  background: rgb(12, 147, 209);
+}
+
+div.circle2 {
+  background: rgb(236, 155, 5);
+}
+
+.pop-up {
+  position: fixed;
+  visibility: hidden;
+}
+
+.pop-up-active {
+  position: fixed;
+  top: 10%;
+  visibility: visible;
+  right: 25%;
+  width: 35rem;
+  padding: 2px; 
+  border-radius: 1%;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, .40);
+  opacity: 1;
+  transition: 0.5s;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.cross-btn {
+  float: right;
+  margin-bottom: .5rem;
+}
+
+.text-modeling {
+  padding: 0 3% 0 3%;
+  margin-top: -11rem; 
+}
+
+.havoring {
+  display: block;
+}
+
+.img-bg {
+  filter: brightness(50%)
 }

@@ -3,7 +3,7 @@ import Main from "./components";
 
 function App() {
   return (
-    <div className="App">
+    <div style={{margin: '30px'}}>
       <Main />
     </div>
   );
